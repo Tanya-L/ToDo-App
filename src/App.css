@@ -1,22 +1,102 @@
-.App {
-  text-align: center;
+body{
+  background-color:lightgrey;
 }
 
-.App-logo {
-  height: 40vmin;
+.App{
+  background-color: peachpuff;
+  min-height: 500px;
+  width: 400px;
+  margin: 40px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1{
+text-align: center;
+margin: 40px;
+font-size: 36px;
+padding: 25px 0 0 0;
 }
 
-.App-link {
-  color: #09d3ac;
+#todo-form input{
+  background-color: white;
+  border: 10px;
+  width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  color: black;
+}
+
+#todo-form input::placeholder{
+  color: black;
+}
+
+#todo-form input:focus{
+  outline: none;
+}
+#todo-form button{
+  height: 55px;
+  width: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-color:green; 
+  cursor: pointer;
+  font-size: 18px;
+  margin: 15px;
+  font-weight: bolder; 
+}
+#todo-form button:focus{
+  outline: none;
+}
+
+.list{
+  color: black;
+  width: 300px;
+  background-color: white;
+  height: 50px;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.list p{
+  padding: 10px;
+  position: relative;
+}
+
+.list p span{
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.list p input{
+  background-color: transparent;
+  border: 0;
+  color: black;
+  font-size: 18px;
+}
+
+.list p input:focus{
+  outline: none;
+}
+
+.faicons {
+  margin: 0 5px;
+  font-size: 15px;
+}
+
+.itemsAnim-enter{
+  opacity: 0.01;
+}
+.itemsAnim-enter .itemsAnim-enter-active{
+  opacity: 1;
+  transition: opacity 300ms ease-in
+}
+.itemsAnim-leave{
+  opacity: 1;
+}
+.itemsAnim-leave .itemsAnim-leave-active{
+  opacity: 0.01;
+  transition: opacity 300ms ease-in
 }
