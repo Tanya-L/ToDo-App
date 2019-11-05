@@ -67,21 +67,23 @@ class App extends React.Component {
         // console.log(item.key + "    " + key);
         item.text = text;
       }
+      return text;
     });
     this.setState({
       items: items
     });
   }
 
-  setUpdateDone(done, key) {
-    const items = this.state.items;
-    items.map(item => {
+  setUpdateDone(key) {
+    var newItems = this.state.items.map(item => {
       if (item.key === key) {
-        item.done = done;
+        item.checked = !item.checked;
+        // item.filter = item.filter !== 'Done' ? "Done" : "All done";
       }
+      return item;
     });
     this.setState({
-      items: items
+      items: newItems
     });
   }
 
